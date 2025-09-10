@@ -42,6 +42,12 @@ typedef struct pin_def {
 #define PIN_D11 (pin_def){ &DDRB, &PORTB, &PINB, PORTB3 }
 #define PIN_D12 (pin_def){ &DDRB, &PORTB, &PINB, PORTB4 }
 #define PIN_D13 (pin_def){ &DDRB, &PORTB, &PINB, PORTB5 }
+#define PIN_A0  (pin_def){ &DDRC, &PORTC, &PINC, PORTC0 }
+#define PIN_A1  (pin_def){ &DDRC, &PORTC, &PINC, PORTC1 }
+#define PIN_A2  (pin_def){ &DDRC, &PORTC, &PINC, PORTC2 }
+#define PIN_A3  (pin_def){ &DDRC, &PORTC, &PINC, PORTC3 }
+#define PIN_A4  (pin_def){ &DDRC, &PORTC, &PINC, PORTC4 }
+#define PIN_A5  (pin_def){ &DDRC, &PORTC, &PINC, PORTC5 }
 
 void pin_set_mode(pin_def pin, uint8_t mode);
 void pin_set_state(pin_def pin, uint8_t state);

@@ -67,6 +67,7 @@ void ssd_render_char(ssd_display disp, uint8_t sub, ssd_char value);
 void ssd_render(ssd_display disp);
 void ssd_write_char(ssd_display* disp, uint8_t sub, ssd_char value);
 void ssd_write_int(ssd_display* disp, uint16_t value);
+void ssd_write_hex(ssd_display* disp, uint16_t value);
 void ssd_shutdown(ssd_display disp);
 
 #endif //LIBSSD_H

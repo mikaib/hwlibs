@@ -82,7 +82,19 @@ void ssd_write_int(ssd_display* disp, const uint16_t value) {
         div *= 10;
         pos--;
     }
+}
 
+void ssd_write_hex(ssd_display* disp, const uint16_t value) {
+    int pos = disp->display_count - 1;
+    uint16_t temp = value;
+
+    for (uint8_t idx = 0; idx < disp->display_count; idx++) {
+        int digit = temp & 0x0F;
+        ssd_write_char(disp, pos, g_ssd_conv[digit]);
+
+        temp >>= 4;
+        pos--;
+    }
 }
 
 void ssd_shutdown(const ssd_display disp) {
